@@ -1,0 +1,120 @@
+aid: pearl-dental
+url: https://raw.githubusercontent.com/api-evangelist/pearl-dental/refs/heads/main/apis.yml
+name: Pearl
+kind: company
+description: Pearl is a dental AI computer-vision company whose FDA-cleared products -
+  Second Opinion (real-time pathology and restorative detection on 2D and 3D dental
+  radiographs), Practice Intelligence (clinical and operational analytics over full
+  practice-management-system data), and Precheck (AI insurance claim review) - are
+  delivered by embedding Pearl's cloud AI into third-party imaging and practice
+  management software rather than through a public, self-serve developer API. Pearl
+  integrates natively with 40+ imaging/PMS platforms (DEXIS, Carestream, Planmeca
+  Romexis, Dentsply Sirona Sidexis, Apteryx XVWeb, MiPACS, Open Dental, Dentrix,
+  Eaglesoft, Curve, Denticon, Software of Excellence EXACT) and is an authorized
+  vendor in the Henry Schein One API Exchange. There is no publicly documented,
+  self-signup Pearl developer API, SDK, or OpenAPI reference; API access is
+  partner/OEM-gated and arranged through Pearl's integrations and sales teams. The
+  API surfaces below are modeled from Pearl's public product descriptions and
+  integration architecture, not from published Pearl API reference documentation.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- AI
+- Dental
+- Computer Vision
+- Radiology
+- Medical Imaging
+- Pathology Detection
+- Healthcare
+- Partner Gated
+created: '2026-07-05'
+modified: '2026-07-05'
+specificationVersion: '0.19'
+apis:
+- aid: pearl-dental:pearl-dental-second-opinion-image-analysis-api
+  name: Pearl Second Opinion Image Analysis API
+  tags:
+  - Image Analysis
+  - Radiographs
+  - Pathology Detection
+  - Partner Gated
+  - Modeled
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://hellopearl.com/products/second-opinion
+  properties:
+  - url: https://hellopearl.com/products/second-opinion
+    type: Documentation
+  - url: https://www.hellopearl.com/native-integration
+    type: Integrations
+  description: Partner/OEM-gated cloud AI surface behind Second Opinion. When an imaging
+    partner uploads a bitewing, periapical, panoramic, or CBCT radiograph, Pearl's
+    cloud computer-vision service analyzes it and returns detections - up to 18
+    findings per image (incipient/progressed caries, bone loss with millimeter and
+    ratio measurements, calculus, periapical radiolucencies, defective margins,
+    widened PDL, impactions) plus existing restorations (crowns, fillings, bridges,
+    root canals, implants) - as labeled bounding boxes and metadata overlaid on the
+    original image. There is no public, self-serve developer reference for this
+    surface; endpoints are modeled from Pearl's product and integration descriptions.
+- aid: pearl-dental:pearl-dental-practice-intelligence-analytics-api
+  name: Pearl Practice Intelligence Analytics API
+  tags:
+  - Analytics
+  - Practice Management
+  - Clinical Performance
+  - Partner Gated
+  - Modeled
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://hellopearl.com/products/practice-intelligence
+  properties:
+  - url: https://hellopearl.com/products/practice-intelligence
+    type: Documentation
+  - url: https://www.hellopearl.com/native-integration
+    type: Integrations
+  description: Practice Intelligence pairs Pearl's diagnostic AI with full
+    practice-management-system data to surface clinical quality, financial
+    performance, appointment compliance, case acceptance, and per-provider
+    production across one location or hundreds. It integrates by consuming a PMS
+    that "exposes a public API or accessible data layer" (Open Dental, Dentrix,
+    Eaglesoft, Carestack, Oryx, Curve, Denticon, EXACT), with custom integrations
+    delivered in ~40 business days. Pearl does not publish a self-serve developer
+    API for the resulting analytics; this surface is modeled from public product
+    documentation.
+- aid: pearl-dental:pearl-dental-pms-integration-exchange-api
+  name: Pearl PMS Integration Exchange API
+  tags:
+  - Integrations
+  - Practice Management
+  - API Exchange
+  - Partner Gated
+  - Modeled
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.hellopearl.com/press-release/pearl-joins-henry-schein-one-api-exchange-as-an-authorized-integration-vendor
+  properties:
+  - url: https://www.hellopearl.com/native-integration
+    type: Documentation
+  - url: https://management.hellopearl.com/
+    type: Portal
+  description: The integration/enablement layer through which Pearl is provisioned
+    inside third-party imaging and practice management systems - including as an
+    authorized vendor in the Henry Schein One API Exchange for Dentrix and Dentrix
+    Ascend. Practices and DSOs are onboarded (remote install, historical data
+    ingestion, phased go-live, up to 50 offices per month) and managed via the Pearl
+    Management Portal. This is a partner/vendor-facing integration process, not a
+    public developer API; endpoints are modeled and not published by Pearl.
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/hellopearl
+- type: Website
+  url: https://hellopearl.com
+- type: Documentation
+  url: https://help.hellopearl.com
+- type: Integrations
+  url: https://www.hellopearl.com/native-integration
+- type: Portal
+  url: https://management.hellopearl.com/
+- type: Plans
+  url: plans/pearl-dental-plans-pricing.yml
+- type: Blog
+  url: https://hellopearl.com/blog
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

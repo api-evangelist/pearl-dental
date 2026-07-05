@@ -1,0 +1,36 @@
+aid: pearl-dental
+name: Pearl Plans and Pricing
+accessModel: Contact Sales / Partner-Gated
+note: |
+  Pearl does not publish a public price list, a self-serve signup, or a metered
+  developer API pricing page. Pearl is sold to dental practices, DSOs, and through
+  imaging/PMS partners via a sales conversation and custom quotes. The figures below
+  are OBSERVED from third-party sources (software directories and industry blogs),
+  not from an official Pearl rate card, and are provided only to characterize the
+  commercial model. Treat all numbers as approximate and unverified by Pearl.
+official:
+  pricingPage: null
+  demoOrContact: https://hellopearl.com
+  model: Per-location subscription plus implementation/setup fees; enterprise and
+    DSO pricing is volume-based and negotiated. No multi-year contract required.
+observedThirdParty:
+  - product: Second Opinion (2D/3D radiographic AI)
+    approxPrice: ~$299/month per location (flat-rate subscription, observed)
+    source: https://www.themolarreport.com/learn/pearl-pricing
+  - product: Second Opinion + Practice Intelligence (single-location bundle)
+    approxPrice: ~$700-$900/month per location (observed budgeting estimate)
+    source: https://www.themolarreport.com/learn/pearl-pricing
+  - product: Implementation / setup
+    approxPrice: ~$5,000-$20,000 one-time depending on scale (observed); partner
+      discounts noted (e.g. 50% off setup via Patterson Dental)
+    source: https://www.themolarreport.com/learn/pearl-pricing
+  - product: Precheck / insurance verification / Smart Margin
+    approxPrice: Custom quote, no published list price
+    source: https://www.themolarreport.com/learn/pearl-pricing
+  - product: Enterprise / DSO
+    approxPrice: Volume-based, negotiated (e.g. PDS Health 1,100+ locations)
+    source: https://www.hellopearl.com/press-release/pds-health-selects-pearl-as-enterprise-ai-partner-to-support-scaled-clinical-integration
+developerApiPricing: |
+  None published. There is no public, self-serve Pearl developer API with metered or
+  tiered pricing. API/integration access is partner/OEM-gated and arranged through
+  Pearl's integrations and sales teams.

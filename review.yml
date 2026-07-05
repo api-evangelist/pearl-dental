@@ -1,0 +1,96 @@
+aid: pearl-dental
+name: Pearl
+review:
+  question: Does Pearl expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-05'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Pearl publishes no public developer API of any
+    kind - REST, SSE, or WebSocket - so there is no documented server-push transport
+    on a Pearl API to model. Pearl's real-time behavior (radiograph analysis returned
+    in under a minute) happens inside partner imaging/PMS software via Pearl's
+    partner/OEM-gated cloud service, whose interface is not publicly documented.
+findings:
+  summary: |
+    Pearl does not publish a documented public WebSocket API, and in fact does not
+    publish a public, self-serve developer API, SDK, or OpenAPI reference of any kind.
+    Pearl is a dental AI computer-vision company. Its FDA-cleared products - Second
+    Opinion (2D/3D radiograph pathology and restorative detection), Practice
+    Intelligence (clinical/operational analytics over PMS data), and Precheck
+    (insurance claim AI) - are delivered by embedding Pearl's cloud AI into
+    third-party imaging and practice management systems. Access is partner/OEM-gated:
+    Pearl integrates natively with 40+ imaging/PMS platforms and is an authorized
+    vendor in the Henry Schein One API Exchange, but exposes no public developer
+    portal, no published API reference, and no signup-and-call API. No REST base URL,
+    SSE stream, or WebSocket (ws:// or wss://) endpoint is documented on any Pearl
+    property as of the review date.
+  accessModel: |
+    Partner / OEM gated. Pearl is provisioned through imaging and PMS vendors and
+    through direct sales to practices and DSOs. Pearl operates a Pearl Management
+    Portal (management.hellopearl.com) and a standalone web application
+    (secondopinion.hellopearl.com), plus a Help Center (help.hellopearl.com), but
+    none of these constitute a public developer API surface. Custom integrations are
+    offered for any system that "exposes a public API or accessible data layer,"
+    meaning Pearl typically CONSUMES a partner's API rather than publishing its own.
+  endpointsModeled: true
+  endpointsModeledNote: |
+    The three API surfaces in apis.yml (Second Opinion Image Analysis, Practice
+    Intelligence Analytics, PMS Integration Exchange) are MODELED from Pearl's public
+    product pages and integration descriptions. They are tagged "Modeled" and
+    "Partner Gated." No OpenAPI, endpoint paths, request/response schemas, or auth
+    details were fabricated, because none are published by Pearl. No openapi/,
+    rate-limits/, finops/, or collections/ artifacts were created for the same reason.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: Pearl's cloud analysis service is invoked by integrated partner software,
+        but no public REST reference, base URL, or auth is documented for third-party
+        developers.
+    - protocol: SSE
+      scheme: https
+      documented: false
+      note: No documented Server-Sent Events surface on any Pearl API.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented on any Pearl product, portal, or
+        integration page as of the review date.
+sources:
+  - url: https://hellopearl.com/
+    type: Website
+    note: Corporate site; product marketing, no developer API portal.
+  - url: https://hellopearl.com/products/second-opinion
+    type: Documentation
+    note: Second Opinion integrates directly with imaging systems; up to 18 findings
+      per image; no API/SDK/endpoint or developer access mentioned.
+  - url: https://hellopearl.com/products/practice-intelligence
+    type: Documentation
+    note: Analytics over full PMS data; integrates by consuming a PMS public API or
+      data layer; no Pearl developer API documented.
+  - url: https://www.hellopearl.com/native-integration
+    type: Integrations
+    note: 40+ native imaging/PMS integrations; partner-facing, not a developer portal.
+  - url: https://www.hellopearl.com/press-release/pearl-joins-henry-schein-one-api-exchange-as-an-authorized-integration-vendor
+    type: PressRelease
+    note: Pearl is an authorized vendor in the Henry Schein One API Exchange; no
+      detail of Pearl's own API, SDK, or endpoints is disclosed.
+  - url: https://management.hellopearl.com/
+    type: Portal
+    note: Pearl Management Portal for provisioned customers; not a public developer API.
+  - url: https://help.hellopearl.com
+    type: Documentation
+    note: Customer Help Center; no API reference.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket (or any public) protocol surface exists to document. Pearl publishes
+    no self-serve developer API, so this entry is an honest partner/OEM-gated stub:
+    three modeled, partner-gated API surfaces pointing at real Pearl product and
+    integration pages, a contact-sales Plans file built only from clearly-attributed
+    third-party pricing observations, and no fabricated OpenAPI/rate-limit/finops/
+    collection artifacts. No AsyncAPI document was created because there is no
+    documented server-push transport on a Pearl API.
