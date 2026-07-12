@@ -101,6 +101,8 @@ apis:
     Management Portal. This is a partner/vendor-facing integration process, not a
     public developer API; endpoints are modeled and not published by Pearl.
 common:
+- type: DomainSecurity
+  url: security/pearl-dental-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/hellopearl
 - type: Website
