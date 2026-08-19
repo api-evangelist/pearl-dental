@@ -39,7 +39,7 @@ tags:
 - Partner Gated
 created: '2026-07-05'
 modified: '2026-07-05'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: pearl-dental:pearl-dental-second-opinion-image-analysis-api
   name: Pearl Second Opinion Image Analysis API
