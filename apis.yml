@@ -29,6 +29,15 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/pearl-dental.png
 tags:
+- Artificial Intelligence
+- Dental
+- Computer-Vision
+- Radiology
+- Medical Imaging
+- Pathology Detection
+- Healthcare
+- Partner Gated
+tags_raw:
 - AI
 - Dental
 - Computer Vision
@@ -92,6 +101,12 @@ apis:
 - aid: pearl-dental:pearl-dental-pms-integration-exchange-api
   name: Pearl PMS Integration Exchange API
   tags:
+  - Integration
+  - Practice Management
+  - API Exchange
+  - Partner Gated
+  - Modeled
+  tags_raw:
   - Integrations
   - Practice Management
   - API Exchange
