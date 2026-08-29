@@ -16,6 +16,17 @@ description: Pearl is a dental AI computer-vision company whose FDA-cleared prod
   partner/OEM-gated and arranged through Pearl's integrations and sales teams. The
   API surfaces below are modeled from Pearl's public product descriptions and
   integration architecture, not from published Pearl API reference documentation.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: approval
