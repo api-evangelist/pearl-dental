@@ -42,7 +42,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/pearl-dent
 tags:
 - Artificial Intelligence
 - Dental
-- Computer-Vision
+- Computer Vision
 - Radiology
 - Medical Imaging
 - Pathology Detection
@@ -57,11 +57,13 @@ tags_raw:
 - Pathology Detection
 - Healthcare
 - Partner Gated
+- Computer-Vision
 created: '2026-07-05'
 modified: '2026-07-05'
 specificationVersion: '0.23'
 apis:
 - aid: pearl-dental:pearl-dental-second-opinion-image-analysis-api
+  endpointsModeled: true
   name: Pearl Second Opinion Image Analysis API
   tags:
   - Image Analysis
@@ -86,6 +88,7 @@ apis:
     original image. There is no public, self-serve developer reference for this
     surface; endpoints are modeled from Pearl's product and integration descriptions.
 - aid: pearl-dental:pearl-dental-practice-intelligence-analytics-api
+  endpointsModeled: true
   name: Pearl Practice Intelligence Analytics API
   tags:
   - Analytics
@@ -110,6 +113,7 @@ apis:
     API for the resulting analytics; this surface is modeled from public product
     documentation.
 - aid: pearl-dental:pearl-dental-pms-integration-exchange-api
+  endpointsModeled: true
   name: Pearl PMS Integration Exchange API
   tags:
   - Integration
