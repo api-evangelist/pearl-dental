@@ -70,6 +70,11 @@ apis:
   - Image Analysis
   - Radiographs
   - Pathology Detection
+  - Modeled
+  tags_raw:
+  - Image Analysis
+  - Radiographs
+  - Pathology Detection
   - Partner Gated
   - Modeled
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
@@ -92,6 +97,11 @@ apis:
   endpointsModeled: true
   name: Pearl Practice Intelligence Analytics API
   tags:
+  - Analytics
+  - Practice Management
+  - Clinical Performance
+  - Modeled
+  tags_raw:
   - Analytics
   - Practice Management
   - Clinical Performance
@@ -120,7 +130,6 @@ apis:
   - Integration
   - Practice Management
   - API Exchange
-  - Partner Gated
   - Modeled
   tags_raw:
   - Integrations
