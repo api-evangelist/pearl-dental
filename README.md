@@ -1,4 +1,4 @@
-# Pearl (pearl-dental)
+# Pearl
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,80 +64,93 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Pearl is a dental AI computer-vision company (West Hollywood, CA; founded 2019; CEO Ophir Tanz). Its FDA-cleared products deliver AI at the point of care by embedding into third-party dental imaging and practice management software rather than through a public, self-serve developer API:
+Pearl is a dental AI computer-vision company whose FDA-cleared products - Second Opinion (real-time pathology and restorative detection on 2D and 3D dental radiographs), Practice Intelligence (clinical and operational analytics over full practice-management-system data), and Precheck (AI insurance claim review) - are delivered by embedding Pearl's cloud AI into third-party imaging and practice management software rather than through a public, self-serve developer API. Pearl integrates natively with 40+ imaging/PMS platforms (DEXIS, Carestream, Planmeca Romexis, Dentsply Sirona Sidexis, Apteryx XVWeb, MiPACS, Open Dental, Dentrix, Eaglesoft, Curve, Denticon, Software of Excellence EXACT) and is an authorized vendor in the Henry Schein One API Exchange. There is no publicly documented, self-signup Pearl developer API, SDK, or OpenAPI reference; API access is partner/OEM-gated and arranged through Pearl's integrations and sales teams. The API surfaces below are modeled from Pearl's public product descriptions and integration architecture, not from published Pearl API reference documentation.
 
-- **Second Opinion** — real-time pathology and restorative detection on 2D and 3D (CBCT) dental radiographs. Detects up to 18 findings per image (incipient/progressed caries, bone loss with millimeter and ratio measurements, calculus, periapical radiolucencies, defective margins, widened PDL, impactions) plus existing restorations (crowns, fillings, bridges, root canals, implants), returned as labeled bounding boxes overlaid on the image. 95%+ accuracy; 90%+ of images processed in under one minute.
-- **Practice Intelligence** — clinical and operational analytics pairing Pearl's diagnostic AI with full practice-management-system data (clinical quality, financial performance, appointment compliance, case acceptance, per-provider production) across one location or hundreds.
-- **Precheck** — AI insurance claim review / claims automation.
+**Areas:** Artificial Intelligence · Dental · Computer Vision · Radiology · Medical Imaging · Pathology Detection · Healthcare
 
-## Access model — partner / OEM gated (important)
+## Pearl on APIs.io
 
-**Pearl does not publish a public, self-serve developer API, SDK, or OpenAPI reference.** There is no developer portal, no API key signup, and no published API reference. Pearl's AI is provisioned through imaging/PMS partners and direct sales to practices and DSOs:
+Everything profiled for Pearl is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/pearl-dental/](https://apis.io/providers/pearl-dental/)** — or go straight to one of the APIs or properties below.
 
-- **40+ native integrations** including DEXIS, Carestream, Planmeca Romexis, Dentsply Sirona Sidexis, Apteryx XVWeb, MiPACS, Open Dental, Dentrix, Eaglesoft, Carestack, Oryx, Curve, Denticon, and Software of Excellence EXACT.
-- **Authorized vendor in the Henry Schein One API Exchange** (Dentrix / Dentrix Ascend).
-- **Custom integrations** for any system that "exposes a public API or accessible data layer" — i.e. Pearl typically *consumes* a partner's API rather than publishing its own — delivered in ~40 business days.
-- Provisioned customers are managed through the **Pearl Management Portal** (management.hellopearl.com), with a standalone web app (secondopinion.hellopearl.com) and a Help Center (help.hellopearl.com).
+### APIs (3)
 
-Because there is no published Pearl API reference, the API surfaces documented here are **modeled** from Pearl's public product and integration descriptions and are tagged **Modeled** / **Partner Gated**. No OpenAPI, endpoint paths, schemas, or auth were fabricated, and no `openapi/`, `rate-limits/`, `finops/`, or `collections/` artifacts were created.
+- [Pearl Second Opinion Image Analysis API](https://apis.io/apis/pearl-dental/pearl-dental-second-opinion-image-analysis-api/) — Partner/OEM-gated cloud AI surface behind Second Opinion. When an imaging partner uploads a bitewing, periapical, panoramic, or CBCT radiograph, Pearl's…
+- [Pearl Practice Intelligence Analytics API](https://apis.io/apis/pearl-dental/pearl-dental-practice-intelligence-analytics-api/) — Practice Intelligence pairs Pearl's diagnostic AI with full practice-management-system data to surface clinical quality, financial performance, appointment…
+- [Pearl PMS Integration Exchange API](https://apis.io/apis/pearl-dental/pearl-dental-pms-integration-exchange-api/) — The integration/enablement layer through which Pearl is provisioned inside third-party imaging and practice management systems - including as an authorized…
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/pearl-dental/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/pearl-dental/refs/heads/main/apis.yml)
+### Published properties
 
-## Tags
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- AI
-- Dental
-- Computer Vision
-- Radiology
-- Medical Imaging
-- Pathology Detection
-- Healthcare
-- Partner Gated
+#### Security (1)
 
-## Timestamps
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Created:** 2026-07-05
-- **Modified:** 2026-07-05
+- [Pearl Dental Domain Security](https://apis.io/security/pearl-dental/pearl-dental-domain-security/)
 
-## APIs (modeled, partner-gated)
+#### Plans and pricing (1)
 
-### Pearl Second Opinion Image Analysis API
+Published plans, tiers and prices.
 
-Partner/OEM-gated cloud AI surface behind Second Opinion. Integrated imaging software submits a radiograph (bitewing, periapical, panoramic, or CBCT) and receives detections and measurements as labeled bounding boxes and metadata. No public developer reference; endpoints are modeled from product descriptions.
+- [Pearl Dental Plans Pricing](https://apis.io/plans/pearl-dental/pearl-dental-plans-pricing/)
 
-- **Human URL:** [https://hellopearl.com/products/second-opinion](https://hellopearl.com/products/second-opinion)
+## Where to find this API
 
-### Pearl Practice Intelligence Analytics API
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-Analytics pairing diagnostic AI with full PMS data (clinical quality, financials, appointment compliance, case acceptance, per-provider production). Integrates by consuming a PMS that exposes a public API or accessible data layer. No public Pearl developer API; surface is modeled.
-
-- **Human URL:** [https://hellopearl.com/products/practice-intelligence](https://hellopearl.com/products/practice-intelligence)
-
-### Pearl PMS Integration Exchange API
-
-Partner/vendor enablement layer through which Pearl is provisioned inside imaging/PMS systems, including as an authorized vendor in the Henry Schein One API Exchange, and managed via the Pearl Management Portal. Not a public developer API; endpoints are modeled.
-
-- **Human URL:** [https://www.hellopearl.com/press-release/pearl-joins-henry-schein-one-api-exchange-as-an-authorized-integration-vendor](https://www.hellopearl.com/press-release/pearl-joins-henry-schein-one-api-exchange-as-an-authorized-integration-vendor)
-
-## Plans and pricing
-
-Contact-sales / partner-gated. Pearl publishes no price list, self-serve signup, or metered developer-API pricing. See [plans/pearl-dental-plans-pricing.yml](plans/pearl-dental-plans-pricing.yml) for the commercial model and clearly-attributed third-party observed price points (e.g. Second Opinion observed at ~$299/month per location; setup fees observed at ~$5,000–$20,000; enterprise/DSO negotiated). All figures are third-party observations, not an official Pearl rate card.
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/hellopearl)
 - [Website](https://hellopearl.com)
 - [Documentation](https://help.hellopearl.com)
-- [Integrations](https://www.hellopearl.com/native-integration)
-- [Portal](https://management.hellopearl.com/)
-- [Plans](plans/pearl-dental-plans-pricing.yml)
 - [Blog](https://hellopearl.com/blog)
 
-## WebSocket review
+## API Evangelist rating
 
-Pearl does **not** expose a documented public WebSocket API — and does not expose a public developer API of any kind. See [review.yml](review.yml).
+**Kin Score 9.4** — minimal · rubric 0.24.0 · scored 2026-10-17
 
-## Maintainers
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 0.0 |
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.4** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/pearl-dental/](https://apis.io/providers/pearl-dental/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Pearl: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/pearl-dental/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
